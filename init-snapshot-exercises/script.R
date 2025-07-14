@@ -1,4 +1,5 @@
-library(ggplot)
+library(ggplot2)
+
 library(dplyr)
 # Read the iris dataset
 data(iris)

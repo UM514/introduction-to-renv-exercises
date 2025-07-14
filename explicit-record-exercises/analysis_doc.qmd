@@ -7,7 +7,7 @@ editor: visual
 
 ## Example of Needing {maps} Package from Suggests of {ggplot2}
 
-Call in the ggplot2 package 
+Call in the ggplot2 package
 
 ```{r}
 library(ggplot2)
@@ -19,11 +19,10 @@ Call map data using the map_data() function
 world_map <- map_data("world")
 ```
 
-This will result in an error because the data for these maps is in the {maps} package, which is in the suggests of ggplot2. To fix this, you will need to record the {maps} in your `renv.lock` file.
+This will result in an error because the data for these maps is in the {maps} package, which is in the suggests of ggplot2.
+To fix this, you will need to record the {maps} in your `renv.lock` file.
 
 ```{r}
 ggplot(world_map, aes(x=long, y = lat, group = group)) +
   geom_polygon() 
 ```
-
-
